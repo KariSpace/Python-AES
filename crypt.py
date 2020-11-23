@@ -12,7 +12,7 @@ def write_key():
 
 def load_key():
     """
-    Loads the key from the current directory named `key.key`
+    Loads the key from file `key.key`
     """
     return open("key.key", "rb").read()
 
@@ -45,7 +45,9 @@ if __name__ == "__main__":
     """
     A simple interface for user based on switch/cases 
     """
-    option = input("Chose what you want to do: \n\n1.Generate key\n2.Encrypt file\n3.Decrypt file\n\nYour choise: ") 
+    option = input("Chose what you want to do: "\
+            "\n\n1.Generate key\n2.Encrypt file\n3.Decrypt file\n\n"\
+            "Your choise: ") 
     file = ""
     key = ""
 
@@ -57,8 +59,11 @@ if __name__ == "__main__":
 
     elif option == "2":
         while len(file) == 0:
-            file = input("File to encrypt (like dataToEncrypt.txt)") 
-        sub_option = input("Chose what you want to do: \n\n1.Get generated key from file\n2.Generate new key and use it \n3.Use my key\n\nYour choise: ") 
+            file = input("File to encrypt (like data.txt)") 
+
+        sub_option = input("Chose what you want to do: "\
+                    "\n\n1.Get generated key from file\n2.Generate new key and use it "\
+                    "\n3.Use my key\n\nYour choise: ") 
         
         if sub_option == "1":
             write_key()
@@ -76,8 +81,11 @@ if __name__ == "__main__":
                 
     elif option == "3":
         while len(file) == 0:
-            file = input("File to decrypt (like data.csv): ") 
-        sub_option = input("Chose what you want to do: \n\n1.Get generated key from file\n2.Use my key\n\nYour choise: ") 
+            file = input("File to decrypt (like data.txt): ") 
+            
+        sub_option = input("Chose what you want to do: "\
+                    "\n\n1.Get generated key from file\n2.Use my key\n\n"\
+                    "Your choise: ") 
         
         key = load_key()
 
@@ -89,3 +97,4 @@ if __name__ == "__main__":
                 key = input("Your key: ")
 
         decrypt(file, key)
+
