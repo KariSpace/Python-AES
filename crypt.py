@@ -45,8 +45,8 @@ if __name__ == "__main__":
     """
     A simple interface for user based on switch/cases 
     """
-    option = input("Chose what you want to do: "\
-            "\n\n1.Generate key\n2.Encrypt file\n3.Decrypt file\n\n"\
+    option = input("Chose what you want to do: "
+            "\n\n1.Generate key\n2.Encrypt file\n3.Decrypt file\n\n"
             "Your choise: ") 
     file = ""
     key = ""
@@ -61,8 +61,8 @@ if __name__ == "__main__":
         while len(file) == 0:
             file = input("File to encrypt (like data.txt)") 
 
-        sub_option = input("Chose what you want to do: "\
-                    "\n\n1.Get generated key from file\n2.Generate new key and use it "\
+        sub_option = input("Chose what you want to do: "
+                    "\n\n1.Get generated key from file\n2.Generate new key and use it "
                     "\n3.Use my key\n\nYour choise: ") 
         
         if sub_option == "1":
@@ -82,9 +82,9 @@ if __name__ == "__main__":
     elif option == "3":
         while len(file) == 0:
             file = input("File to decrypt (like data.txt): ") 
-            
-        sub_option = input("Chose what you want to do: "\
-                    "\n\n1.Get generated key from file\n2.Use my key\n\n"\
+
+        sub_option = input("Chose what you want to do: "
+                    "\n\n1.Get generated key from file\n2.Use my key\n\n"
                     "Your choise: ") 
         
         key = load_key()
